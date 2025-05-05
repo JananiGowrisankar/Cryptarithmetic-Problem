@@ -1,6 +1,6 @@
 <h1>ExpNo 8 : Solve Cryptarithmetic Problem,a CSP(Constraint Satisfaction Problem) using Python</h1> 
-<h3>Name:               </h3>
-<h3>Register Number/Staff Id:       </h3>
+<h3>Name: Janani Gowrisankar              </h3>
+<h3>Register Number/Staff Id: 212224100022      </h3>
 <H3>Aim:</H3>
 <p>
     To solve Cryptarithmetic Problem,a CSP(Constraint Satisfaction Problem) using Python
@@ -71,6 +71,26 @@ Begin<br>
       return true<br>
    return false<br>
 End<br>
+
+# Program:
+
+```
+
+from itertools import permutations
+for p in permutations(range(10),8):
+    S,E,N,D,M,O,R,Y=p
+    if S==0 or M==0:
+        continue
+    SEND=S*1000+E*100+N*10+D
+    MORE=M*1000+O*100+R*10+E
+    MONEY=M*10000+O*1000+N*100+E*10+Y
+    if SEND+MORE==MONEY:
+        print("S={},E={},N={},D={},M={},O={},R={},Y={}".format(S,E,N,D,M,O,R,Y))
+        print(" SEND= {}".format(SEND))
+        print("+MORE= {}".format(MORE))
+        print("MONEY={}".format(MONEY))
+
+```
 <hr>
 <h2>Sample Input and Output:</h2>
 SEND = 9567<br>
